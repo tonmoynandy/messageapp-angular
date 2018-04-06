@@ -1,0 +1,41 @@
+<div class="compose-container">
+	
+		<div class="compose-header">
+			<div class="title">New Message</div>
+			<div class="btn-panel">
+				<em class="minfy fa fa-minus" (click)="onMinimize()"></em>
+				<em class="unminfy fa fa-arrows-alt" (click)="onMaximize()"></em>
+				<em class="close-mail fa fa-times" (click)="onClose()"></em>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="compose-widget" [hidden]="minimize">
+			<div class="compose-body" >
+				<form class="form-horizontal" [formGroup]="form">
+					<div class="compose-body-to-panel">
+						<span class="compose-body-label">To</span>
+						<app-tagbox name="toText" ></app-tagbox>
+						<a href="javascript:" [hidden]="!bcc" (click)="onBcc()">Bcc</a>
+						<a href="javascript:" [hidden]="!cc" (click)="onCC()">CC</a>
+					</div>
+					<div class="compose-body-cc-panel" [hidden]="cc">
+						<span class="compose-body-label">CC</span>
+						<app-tagbox name="ccText" ></app-tagbox>
+					</div>
+					<div class="compose-body-bcc-panel" [hidden]="bcc">
+						<span class="compose-body-label">BCC</span>
+						<span class="compose-body-to-text"></span>
+						<app-tagbox name="bccText" ></app-tagbox>
+					</div>
+					<div class="compose-body-subject">
+						<span class="compose-body-label">Subject</span>
+						<input type="text" name="composeSubject" formControlName="subject" class="compose-textbox" >
+					</div>
+					<textarea class="compose-textarea" formControlName="message"></textarea>
+				</form>
+			</div>
+			<div class="compose-footer">
+				<button class="btn btn-send" (click)="onSend()">Send</button>
+			</div>
+		</div>
+</div>

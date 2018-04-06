@@ -1,0 +1,36 @@
+body{
+	background: #EAEAEB;
+	font-family: arial,sans-serif; 
+}
+.success-note {
+	background: #93ea9d;
+	padding: 10px;
+	border: 1px solid #96bf9b;
+	border-radius: 3px;
+	color: #777;
+	margin-bottom: 15px;
+}
+.error-note{
+	background: #ff9c7e;
+    padding: 10px;
+    border: 1px solid #8a5e39;
+    border-radius: 3px;
+    color: #841d1d;
+    margin-bottom: 15px;	
+}
+.error_message{
+    color: #c55151;
+    font-style: italic;
+    font-size: 11px;
+}
+app-left{
+	float: left;
+	width: 16%;
+}
+app-right{
+	float: left;
+	width: 84%;
+}
+app-tagbox{
+	display: inline-block;
+}

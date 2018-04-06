@@ -1,0 +1,33 @@
+.left-container{
+	background: #FFF;
+	height: 90vh;
+	border-top: 1px solid #CCC;
+	padding-top: 10px;
+}
+.compose-mail {
+	background: #d14836;
+	border-radius: 2px;
+	padding: 5px 40px;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.menu-container ul {
+    padding: 10px 0 0 30px;
+    margin: 0;
+    list-style: none;
+    font-size: 13px;
+}
+.menu-container ul li{
+	padding: 3px 5px;
+}
+.menu-container ul li:hover {
+	background: #f1f1f1;
+    color: #d14836;
+    font-weight: bold;
+    cursor: pointer;
+}
+.menu-container ul li.active {
+	color: #d14836;
+    font-weight: bold;
+}

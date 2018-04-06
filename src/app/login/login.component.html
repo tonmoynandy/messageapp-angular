@@ -1,0 +1,26 @@
+<div class="login-container">
+	<h1>{{title}}</h1>
+	<div class="error-note"  *ngIf="errorMessage" [innerHTML]="errorMessage"></div>
+	<form class="form-horizontal" [formGroup]="form">
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+			<div class="form-group">
+				<input type="email" formControlName="email" class="form-control" placeholder="Email" focustext>
+				<p class="error_message" *ngIf="form.get('email').invalid && (form.submitted || form.get('email').dirty)">Please provide valid email</p>
+			</div>
+		</div>
+		<div class="col-md-12 col-xs-12">
+			<div class="form-group">
+				<input type="password" formControlName="password" class="form-control" placeholder="Password" focustext>
+				<p class="error_message" *ngIf="form.get('password').invalid && (form.submitted || form.get('password').dirty)">Please provide  password</p>
+			</div>
+		</div>
+		<div class="col-md-12 col-xs-12">
+			<button class="btn btn-default" (click)="onSubmit()">Login</button>
+			<a routerLink="/signup" >Create Account</a> |
+			<a routerLink="/forgetpassword" >Forget Password?</a>
+
+		</div>
+	</div>
+	</form>
+</div>

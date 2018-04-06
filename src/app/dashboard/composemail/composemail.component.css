@@ -1,0 +1,90 @@
+.compose-container {
+	position: absolute;
+	bottom: 15px;
+	right: 0;
+	width: 500px;
+	box-shadow: 0px 0 1px 1px #CCC;
+	background: #FFF;
+	font-size: 13px;
+}
+.compose-widget{
+	position: relative;
+	min-height: 450px;
+}
+.compose-container .compose-header{
+	background: #424242;
+	color: #FFF;
+	padding: 8px;
+	font-size: 13px; 
+}
+.compose-container .compose-widget .compose-body{
+	height: 410px;
+}
+.compose-container .compose-widget .compose-footer {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	border-top: 1px solid #CCC;
+	padding: 3px;
+}
+.compose-container .compose-footer .btn-send{
+	background: #4E7FF4;
+	color: #FFF;
+	font-size: 13px;
+	border-radius: 3px;
+}
+.title {
+	float: left;
+}
+.compose-container .compose-header .btn-panel {
+	float: right;
+	font-size: 11px;
+}
+.compose-container .compose-header .btn-panel em {
+	display: inline-block;
+    width: 18px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
+    cursor: pointer;
+    color: #727272;
+}
+.compose-container .compose-header .btn-panel em:hover {
+	background: #727272;
+	color: #b7b7b7;
+}
+.compose-container .compose-body .compose-textarea {
+	resize: none;
+	overflow-y:auto;
+    height:85%;
+    width: 100%;
+    border:none;
+    padding: 5px;
+    outline: none;
+    /*border: 1px solid #CCC;*/
+}
+.compose-body-to-panel , .compose-body-cc-panel , .compose-body-bcc-panel {
+	padding: 5px;
+	border-bottom: 1px solid #CCC;
+}
+.compose-body .compose-body-label {
+	color: #bdbdbd;
+	font-size: 12px;
+}
+.compose-body-to-panel a{
+	float: right;
+	margin-right: 8px;
+	color: #bdbdbd;
+}
+.compose-textbox {
+	width: 90%;
+	outline: none;
+	border: none;
+	padding: 5px;
+}
+.compose-body-subject{
+	border-bottom: 1px solid #CCC;
+}
+.compose-body-subject .compose-body-label{
+	padding-left: 5px;
+}

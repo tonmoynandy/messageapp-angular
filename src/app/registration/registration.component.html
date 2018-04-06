@@ -1,0 +1,56 @@
+<div class="reg-container">
+<h1>{{title}}</h1>
+<div class="success-note"  *ngIf="successMessage" [innerHTML]="successMessage"></div>
+<form class="form-horizontal" [formGroup]="form">
+	<div class="row">
+		<div class="col-md-6 col-xs-12">
+			<div class="form-group">
+				<input type="text" formControlName="firstname" class="form-control" placeholder="First Name" focustext>
+				<p class="error_message" *ngIf="form.get('firstname').invalid && (form.submitted || form.get('firstname').dirty)">Please provide first name</p>
+			</div>
+		</div>
+		<div class="col-md-6 col-xs-12">
+			<div class="form-group">
+				<input type="text" formControlName="lastname" class="form-control" placeholder="Last Name" focustext>
+				<p class="error_message" *ngIf="form.get('lastname').invalid && (form.submitted || form.get('lastname').dirty)">Please provide last name</p>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div><br/>
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+			<div class="form-group">
+				<input type="email" formControlName="email" class="form-control" placeholder="Email" focustext>
+				<p class="error_message" *ngIf="form.get('email').invalid && (form.submitted || form.get('email').dirty)">Please provide valid email</p>
+				<p class="error_message" *ngIf="emailExistError">{{emailExistError}}</p>
+				
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div><br/>
+	<div class="row">
+		<div class="col-md-6 col-xs-12">
+			<div class="form-group" formGroupName="passwords">
+				<input type="password" formControlName="password" class="form-control" placeholder="Password" focustext>
+				<p class="error_message" *ngIf="form.get('passwords.password').invalid && (form.submitted || form.get('passwords.password').dirty)">Please provide valid password</p>
+			</div>
+		</div>
+		<div class="col-md-6 col-xs-12">
+			<div class="form-group" formGroupName="passwords">
+				<input type="password" formControlName="confirmpassword" class="form-control" placeholder="Confirm Password" focustext>
+				<p class="error_message" *ngIf="form.get('passwords.confirmpassword').invalid && (form.submitted || (form.get('passwords.confirmpassword').dirty && form.get('passwords.confirmpassword').errors.required))">Please provide valid password</p>
+
+				<p class="error_message" *ngIf="form.get('passwords.confirmpassword').invalid && (form.submitted || (form.get('passwords.confirmpassword').dirty && form.get('passwords.confirmpassword').errors.MatchPassword))">Please provide same  password</p>
+
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div><br/>
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+			<button type="submit" class="btn btn-default" (click)="onSubmit()">SignUp</button>
+			<a routerLink="" >Sign in instead</a>
+		</div>
+	</div>
+</form>
+</div>
