@@ -14,18 +14,18 @@
 				<form class="form-horizontal" [formGroup]="form">
 					<div class="compose-body-to-panel">
 						<span class="compose-body-label">To</span>
-						<app-tagbox name="toText" ></app-tagbox>
+						<app-tagbox name="toText" formControlName="toAddress" ngDefaultControl></app-tagbox>
 						<a href="javascript:" [hidden]="!bcc" (click)="onBcc()">Bcc</a>
 						<a href="javascript:" [hidden]="!cc" (click)="onCC()">CC</a>
 					</div>
 					<div class="compose-body-cc-panel" [hidden]="cc">
 						<span class="compose-body-label">CC</span>
-						<app-tagbox name="ccText" ></app-tagbox>
+						<app-tagbox name="ccText" formControlName="ccAddress" ngDefaultControl></app-tagbox>
 					</div>
 					<div class="compose-body-bcc-panel" [hidden]="bcc">
 						<span class="compose-body-label">BCC</span>
 						<span class="compose-body-to-text"></span>
-						<app-tagbox name="bccText" ></app-tagbox>
+						<app-tagbox name="bccText" formControlName="bccAddress" ngDefaultControl></app-tagbox>
 					</div>
 					<div class="compose-body-subject">
 						<span class="compose-body-label">Subject</span>

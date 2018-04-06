@@ -1,5 +1,5 @@
 import { Component, ElementRef , OnInit } from '@angular/core';
-import { ReactiveFormsModule, FormGroup, FormBuilder, Validators} from '@angular/forms';
+import { FormsModule, FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {DashboardComponent} from '../dashboard.component';
 import {TagboxComponent}  from '../../tagbox/tagbox.component';
 
@@ -17,9 +17,9 @@ export class ComposemailComponent implements OnInit {
 	textarea : ElementRef;
 	message : string = '';
 	subject : string = '';
-	toAddress : string = '';
-	ccAddress : string = '';
-	bccAddress : string = '';
+	//toAddress : string = '';
+	//ccAddress : string = '';
+	//bccAddress : string = '';
 	form: FormGroup;
 	constructor(
 		private ele : ElementRef,  
@@ -124,7 +124,13 @@ export class ComposemailComponent implements OnInit {
 	}
 
 	onSend() {
-		this.toAddress = this.tag.tagSubmitText;
-		console.log(this.toAddress);
+		var formData = {
+			to : this.form.get('toAddress').value,
+			cc : this.form.get('ccAddress').value,
+			bcc : this.form.get('bccAddress').value,
+			subject : this.form.get('subject').value,
+			message : this.form.get('message').value,
+		}
+				console.log(formData);
 	}
 }

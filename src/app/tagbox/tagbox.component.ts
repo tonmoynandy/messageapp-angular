@@ -29,7 +29,7 @@ export class TagboxComponent implements OnInit {
 					margin:3px 0 0 3px;
 					display:inline-block">`+text+`</em>`;
 			this.ele.nativeElement.querySelector('.tag-text').innerHTML = tagText;
-			this.tagSubmitText += text+',';
+			this.tagSubmitText += text+'|';
 			this.ele.nativeElement.setAttribute('value', this.tagSubmitText);
 			this.ele.nativeElement.querySelector('input[type=text]').value = '';
 			
